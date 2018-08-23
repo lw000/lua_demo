@@ -61,3 +61,6 @@ print("os.time: ", os.time({day=7, month=5, year=2012, hour=0, minute=0, second=
 print("os.date: ", os.date("%c"))
 print("os.clock: ", os.clock())
 
+
+
+

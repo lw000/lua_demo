@@ -3,9 +3,8 @@ local Game = {}
 
 function Game:new(o, id, number )
 	local o = o or {}
-	
-	self.__index = self
 	setmetatable(o, self)
+	self.__index = self
 
 	self.id = id
 	self.number = number
@@ -54,7 +53,7 @@ function main()
 	g:on_game_status()
 	g:on_game_message()
 	g:enter()
-	g:leave()
+	g:leave() 
 end
 
 main()
