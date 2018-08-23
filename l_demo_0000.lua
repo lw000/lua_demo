@@ -1,4 +1,3 @@
-
 local function add( a, b )
     return a + b
 end
@@ -89,8 +88,4 @@ repeat
 until (y > 10)
 
 print(collectgarbage("count"))
-
-print("time: ", os.time())
-print("time: ", os.time({day=7, month=5, year=2012, hour=0, minute=0, second=0}))
-print("date: ", os.date("%c"))
 

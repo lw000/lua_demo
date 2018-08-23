@@ -22,3 +22,8 @@ print("math.abs: " .. math.abs(-2))
 print("math.cel: " .. math.ceil(2.56))
 print("math.floor: " .. math.floor(2.56))
 print("math.sqrt: " .. math.sqrt(5))
+
+
+print("time: ", os.time())
+print("time: ", os.time({day=7, month=5, year=2012, hour=0, minute=0, second=0}))
+print("date: ", os.date("%c"))
