@@ -1,19 +1,44 @@
 
-local x = 1
-print("x:" .. x)
-
 local function add( a, b )
     return a + b
 end
 
-print(1)
-print(add(100, 200))
+local function sum(...)
+    local s = 0
+    for i, v in ipairs{...} do
+        s = s + v
+    end
+    return s
+end
 
-print("math.pi: " .. math.pi)
-print("math.abs: " .. math.abs(-2))
-print("math.cel: " .. math.ceil(2.56))
-print("math.floor: " .. math.floor(2.56))
-print("math.sqrt: " .. math.sqrt(5))
+local function fact(n)
+    if n == 0 then
+        return 1
+    else
+        return n * fact(n - 1)
+    end
+end
+
+function max( num1, num2 )
+    if (num1 > num2) then
+        result = num1
+    else
+        result = num2
+    end
+    return result
+end
+
+local fun_add = function(a, b)
+    return a + b
+end
+
+print("fun_add: " .. fun_add(1, 2))
+
+local x = 1
+print("x: " .. x)
+
+print("add -> " .. add(100, 200))
+print("max -> " .. max(100, 200))
 
 print("aaaaa" .. "bbbbb" .. "ccccc")
 
@@ -41,29 +66,7 @@ for k, v in pairs(tal) do
     print(k .. " : " .. v)
 end
 
-local function fact(n)
-    if n == 0 then
-        return 1
-    else
-        return n * fact(n - 1)
-    end
-end
-
 print("fact: " .. fact(10))
-
--- f = function(a, b)
---     return a + b
--- end
-
--- print("f : " .. f(a, b))
-
-local function sum(...)
-    local s = 0
-    for i, v in ipairs{...} do
-        s = s + v
-    end
-    return s
-end
 
 print("sum: " .. sum(1,2))
 print("sum: " .. sum(1,2,3))
@@ -74,8 +77,12 @@ for i = 1, #arr, 1 do
     print(arr[i])
 end
 
-local y = 1
+mularr = {}
+mularr[1] = {"a", "b"}
+mularr[2] = {1,2,3,4,5,6}
+print("mularr:" .. #mularr .. ", mularr[1]:" .. #mularr[1] .. ", mularr[2]:" .. #mularr[2])
 
+local y = 1
 repeat
     y = y + 1
     print("y:" .. y)
@@ -86,5 +93,4 @@ print(collectgarbage("count"))
 print("time: ", os.time())
 print("time: ", os.time({day=7, month=5, year=2012, hour=0, minute=0, second=0}))
 print("date: ", os.date("%c"))
-
 

@@ -17,4 +17,8 @@ print("string.reverse: " .. string.reverse(s))
 print("string.reverse: " .. string.reverse(s1))
 
 
-
+print("math.pi: " .. math.pi)
+print("math.abs: " .. math.abs(-2))
+print("math.cel: " .. math.ceil(2.56))
+print("math.floor: " .. math.floor(2.56))
+print("math.sqrt: " .. math.sqrt(5))
